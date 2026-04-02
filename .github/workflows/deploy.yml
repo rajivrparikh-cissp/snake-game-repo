@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  PROJECT_ID: your-gcp-project-id # TODO: Update this
+  PROJECT_ID: snakegame-492002
   REGION: us-central1
   GAR_LOCATION: us-central1-docker.pkg.dev
   REPOSITORY: snake-game-repo
