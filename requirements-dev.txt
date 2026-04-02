@@ -1,4 +1,4 @@
 bandit==1.7.5
 safety==2.3.5
-trufflehog==3.63.7
+trufflehog==2.0.89
 flake8==6.1.0
