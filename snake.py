@@ -56,8 +56,8 @@ async def gameLoop():
     snake_List = []
     Length_of_snake = 1
 
-    foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0
-    foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0
+    foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # nosec B311
+    foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # nosec B311
     golden_foodx = None
     golden_foody = None
     golden_timer = 0
@@ -113,9 +113,9 @@ async def gameLoop():
         pygame.draw.rect(screen, RED, [foodx, foody, snake_block, snake_block])
         
         # Manage Golden Apple spawning
-        if golden_foodx is None and random.randint(1, 150) == 1:
-            golden_foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0
-            golden_foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0
+        if golden_foodx is None and random.randint(1, 150) == 1:  # nosec B311
+            golden_foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # nosec B311
+            golden_foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # nosec B311
             golden_timer = 60 # Stays for 60 frames
             
         if golden_foodx is not None:
@@ -146,8 +146,8 @@ async def gameLoop():
 
         # Check if food eaten
         if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0
-            foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0
+            foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # nosec B311
+            foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # nosec B311
             Length_of_snake += 1
 
         # Check if golden apple eaten
