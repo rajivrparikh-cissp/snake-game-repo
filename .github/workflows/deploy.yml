@@ -43,8 +43,9 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
+          base: ""
+          head: ${{ github.ref_name }}
+          extra_args: --debug --only-verified
 
   build_and_deploy:
     name: Build Docker and Deploy to Cloud Run
